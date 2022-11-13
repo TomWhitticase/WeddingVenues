@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+   <title>>Catering Task</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+<style>
+body {
+	font-family: "Apple Chancery", Times, serif;
+	background-color: #D6D6D6;
+}
+.center {
+	text-align:center;
+}
+body,td,th {
+	color: #06F; 
+}
+.larger {
+	font-size:larger;
+	
+}
+table {
+	margin-left:auto;
+	margin-right:auto;
+}
+</style>
+</head>
+<body>
+<h3 class="center">COA123 - Web Programming</h3>
+<h2 class="center">Individual Coursework - Wedding Planner</h2>
+<h1 class="center">Task 1 - Catering (catering.php)</h1>
+  <form action="catering.php" method="get" id="catering">
+    <table border="1">
+      <tr>
+        <th scope="col">Key</th>
+        <th scope="col">Value</th>
+      </tr>
+      <tr>
+        <td><label for="min">Min party size (min)</label></td>
+        <td>
+          <input name="min" type="text" class="larger" id="min" value="30" size="5" />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="max">Max party size (max)</label></td>
+        <td><input name="max" type="text" class="larger" id="max" value="60" size="5" /></td>
+      </tr>
+      <tr>
+        <td><label for="c1">Cost at grade 1 (c1) £</label></td>
+        <td><input name="c1" type="text" class="larger" id="c1" value="5" size="5" /></td>
+      </tr>
+      <tr>
+        <td><label for="c2">Cost at grade 2 (c2) £</label></td>
+        <td><input name="c2" type="text" class="larger" id="c2" value="10" size="5" /></td>
+      </tr>
+      <tr>
+        <td><label for="c3">Cost at grade 3 (c3) £</label></td>
+        <td><input name="c3" type="text" class="larger" id="c3" value="15" size="5" /></td>
+      </tr>
+      <tr>
+        <td><label for="c4">Cost at grade 4 (c4) £</label></td>
+        <td><input name="c4" type="text" class="larger" id="c4" value="20" size="5" /></td>
+      </tr>
+      <tr>
+        <td><label for="c5">Cost at grade 5 (c5) £</label></td>
+        <td><input name="c5" type="text" class="larger" id="c5" value="25" size="5" /></td>
+      </tr>
+      <tr>
+        <td>Submit</td>
+        <td><input type="submit" name="submit" id="submit" value="Submit" class="larger" /></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

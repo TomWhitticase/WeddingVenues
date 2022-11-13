@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+  <title>>Count Task</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <style>
+    body {
+      font-family: "Apple Chancery", Times, serif;
+      background-color: #D6D6D6;
+    }
+    .center {
+      text-align:center;
+    }
+    body,td,th {
+        color: #06F; 
+    }
+    .larger {
+      font-size:larger;
+    }
+    table {
+      margin-left:auto;
+      margin-right:auto;
+    }
+  </style>
+</head>
+<body>
+<h3 class="center">COA123 - Web Programming</h3>
+<h2 class="center">Individual Coursework - Wedding Planner</h2>
+<h1 class="center">Task 3 - Count (count.php)</h1>
+
+  <form action="count.php" method="get" id="count">
+    <table border="1">
+      <tr>
+        <th scope="col">Key</th>
+        <th scope="col">Value</th>
+      </tr>
+      <tr>
+        <td><label for="month">Month (1-12)</label></td>
+
+        <td>
+          <input name="month" type="number" class="larger" id="month" value="1" size="3" />
+        </td>
+      </tr>
+      
+      <tr>
+        <td>List the name of venues and their number of bookings</td>
+        <td><input type="submit" name="submit" id="submit" value="Submit" class="larger" /></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

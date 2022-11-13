@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Wedding</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto Serif Oriya"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid flex-between">
+          <a class="navbar-brand" href="#">Wedding Venues</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-lg-end"
+            id="navbarSupportedContent"
+          >
+            <ul
+              class="nav nav-pills align-right flex-column flex-lg-row p-2"
+              id="myTab"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#home"
+                  type="button"
+                  role="tab"
+                  aria-controls="home"
+                  aria-selected="true"
+                >
+                  Home
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="venues-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#venues"
+                  type="button"
+                  role="tab"
+                  aria-controls="venues"
+                  aria-selected="false"
+                >
+                  Venues
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="about-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#about"
+                  type="button"
+                  role="tab"
+                  aria-controls="about"
+                  aria-selected="false"
+                >
+                  About
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div
+        class="tab-content container justify-content-center w-h-full"
+        id="myTabContent"
+      >
+        <div
+          class="tab-pane fade show active flex-center w-h-full"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <div class="flex-center flex-center w-h-full">
+            <div class="flex-col flex-center pink-box gap">
+              <h1>Find your perfect wedding venue</h1>
+              <div class="line"></div>
+              <button class="btn btn-pink" onclick="changeToSearchTab()">
+                Search for a venue
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="tab-pane fade flex-center w-h-full"
+          id="venues"
+          role="tabpanel"
+          aria-labelledby="venues-tab"
+        >
+          <div class="flex-center flex-col w-h-full container">
+            <div class="flex-col flex-center pink-box gap">
+              <h1>Search our Venues</h1>
+              <div class="line"></div>
+              <form id="input" class="flex-col flex-center gap-small">
+                <!-- date, party size and catering grade provided by users -->
+                <div
+                  class="flex-row flex-center gap"
+                  style="margin-bottom: 1rem"
+                >
+                  <label for="date-range-checkbox"
+                    >Search within a date range</label
+                  >
+
+                  <input
+                    class="text-input"
+                    type="checkbox"
+                    id="date-range-checkbox"
+                    onclick="toggleDateInput()"
+                    checked
+                  />
+                </div>
+
+                <div class="flex-col">
+                  <label for="startDate">Wedding Date</label>
+                  <div class="flex-col gap-small">
+                    <input
+                      placeholder="Starting date..."
+                      class="text-input"
+                      type="date"
+                      id="startDate"
+                      name="startDate"
+                      required
+                    />
+                    <input
+                      placeholder="Ending date..."
+                      class="text-input"
+                      type="date"
+                      id="endDate"
+                      name="endDate"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="flex-col">
+                  <label for="partySize">Party Size </label>
+
+                  <input
+                    placeholder="Party size..."
+                    class="text-input"
+                    type="number"
+                    id="partySize"
+                    name="partySize"
+                    min="1"
+                    max="2000"
+                    required
+                  />
+                </div>
+
+                <div class="flex-col">
+                  <label for="cateringGrade">Catering Grade (1-5)</label>
+
+                  <input
+                    placeholder="Catering grade..."
+                    class="text-input"
+                    type="number"
+                    id="cateringGrade"
+                    name="cateringGrade"
+                    min="1"
+                    max="5"
+                    required
+                  />
+                </div>
+
+                <input
+                  type="submit"
+                  value="Search"
+                  id="submit"
+                  class="btn btn-dark-pink m-3"
+                  required
+                />
+              </form>
+            </div>
+          </div>
+
+          <div class="flex-col flex-center">
+            <div class="accordion" id="accordian"></div>
+          </div>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="about"
+          role="tabpanel"
+          aria-labelledby="about-tab"
+        >
+          <div class="flex-center flex-center w-h-full">
+            <div class="flex-col flex-center pink-box gap">
+              <h1>About this website</h1>
+              <div class="line"></div>
+              <p>
+                This website was built as a piece of university coursework for
+                my first year web programming module. I used HTML, CSS,
+                Javascript, Bootstrap, PHP, and MySQL. I achieved a grade of
+                89%.
+              </p>
+              <a href="https://tomwhitticase.com" style="color: white"
+                >tomwhitticase.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

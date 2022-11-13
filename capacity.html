@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+   <title>>Capacity Task</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+<style>
+body {
+	font-family: "Apple Chancery", Times, serif;
+	background-color: #D6D6D6;
+}
+.center {
+	text-align:center;
+}
+body,td,th {
+	color: #06F; 
+}
+.larger {
+	font-size:larger;
+	
+}
+table {
+	margin-left:auto;
+	margin-right:auto;
+}
+</style>
+</head>
+<body>
+<h3 class="center">COA123 - Web Programming</h3>
+<h2 class="center">Individual Coursework - Wedding Planner</h2>
+
+<h1 class="center">Task 2 - Capacity (capacity.php)</h1>
+  <form action="capacity.php" method="get" id="capacity">
+    <table border="1">
+      <tr>
+        <th scope="col">Key</th>
+        <th scope="col">Value</th>
+      </tr>
+      <tr>
+        <td><label for="minCapacity">Minimum capacity of venue (minCapacity)</label></td>
+        <td>
+          <input name="minCapacity" type="text" class="larger" id="minCapacity" value="150" size="12" />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="maxCapacity">Maximum capacity of venue (maxCapacity)</label></td>
+        <td><input name="maxCapacity" type="text" class="larger" id="maxCapacity" value="220" size="12" /></td>
+      </tr>
+      <tr>
+        <td>List names and prices of available licensed venues with given capacity</td>
+        <td><input type="submit" name="submit" id="submit" value="Submit" class="larger" /></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
