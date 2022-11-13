@@ -27,6 +27,7 @@ form.addEventListener("submit", function (event) {
       cateringGrade
   )
     .then((res) => res.json())
+    .then(console.log)
     .then((data) => displayResults(data, partySize))
     .catch((error) => console.log(error));
 });

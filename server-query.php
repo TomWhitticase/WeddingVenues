@@ -1,9 +1,9 @@
 <?php
 //database login details
-$servername = "sci-mysql";
-$username = "coa123wuser";
-$password = "grt64dkh!@2FD";
-$dbname = "coa123wdb";
+$servername = "sql8.freemysqlhosting.net";
+$username = "sql8567995";
+$password = "6lK89C8ZiD!@2FD";
+$dbname = "sql8567995";
 
 //sanitise inputs to avoid malicous code injection
 function sanitise_input($data)
@@ -16,6 +16,10 @@ function sanitise_input($data)
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
 //select the database
 $conn->select_db($dbname);
 
